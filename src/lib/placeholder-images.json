@@ -41,6 +41,42 @@
       "description": "Screenshot of Project 6",
       "imageUrl": "https://images.unsplash.com/photo-1660198348421-d80e956c7db5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzYWFzJTIwcGxhdGZvcm18ZW58MHx8fHwxNzYxMjk1ODc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "saas platform"
+    },
+    {
+      "id": "project-7",
+      "description": "Screenshot of a creative agency website",
+      "imageUrl": "https://images.unsplash.com/photo-1555421689-491a97ff2040?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YWdlbmN5JTIwd2Vic2l0ZXxlbnwwfHx8fDE3NjEzODAzNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "agency website"
+    },
+    {
+      "id": "project-8",
+      "description": "Screenshot of a lyrics website",
+      "imageUrl": "https://images.unsplash.com/photo-1727793579362-c39e8389258e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtdXNpYyUyMGx5cmljc3xlbnwwfHx8fDE3NjEzODAzNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "music lyrics"
+    },
+    {
+      "id": "project-9",
+      "description": "Screenshot of a Point of Sale system dashboard",
+      "imageUrl": "https://images.unsplash.com/photo-1726065235239-b20b88d43eea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxQT1MlMjBzeXN0ZW18ZW58MHx8fHwxNzYxMzgwMzY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "POS system"
+    },
+    {
+      "id": "project-10",
+      "description": "Screenshot of a Learning Management System",
+      "imageUrl": "https://images.unsplash.com/photo-1746014600883-57f4b16a7012?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZS1sZWFybmluZyUyMHBsYXRmb3JtfGVufDB8fHx8MTc2MTM4MDM2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "e-learning platform"
+    },
+    {
+      "id": "project-11",
+      "description": "Screenshot of a resume builder application",
+      "imageUrl": "https://images.unsplash.com/photo-1659353588156-60841623ae2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxyZXN1bWUlMjBidWlsZGVyfGVufDB8fHx8MTc2MTM4MDM2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "resume builder"
+    },
+    {
+      "id": "project-12",
+      "description": "Screenshot of a multi-vendor e-commerce marketplace",
+      "imageUrl": "https://images.unsplash.com/photo-1677693972403-db681288b5da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxvbmxpbmUlMjBtYXJrZXRwbGFjZXxlbnwwfHx8fDE3NjEzODAzNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "online marketplace"
     }
   ]
 }
