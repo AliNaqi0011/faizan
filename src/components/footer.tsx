@@ -2,6 +2,24 @@ import Link from "next/link";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import { Button } from "./ui/button";
 
+const socialLinks = [
+  {
+    ariaLabel: "Visit my GitHub profile",
+    href: "https://github.com/your-username",
+    icon: <Github className="h-5 w-5" />,
+  },
+  {
+    ariaLabel: "Visit my LinkedIn profile",
+    href: "https://linkedin.com/in/your-username",
+    icon: <Linkedin className="h-5 w-5" />,
+  },
+  {
+    ariaLabel: "Visit my Twitter profile",
+    href: "https://twitter.com/your-username",
+    icon: <Twitter className="h-5 w-5" />,
+  },
+];
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
   return (
@@ -22,21 +40,13 @@ export function Footer() {
             </p>
           </div>
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="#" target="_blank" aria-label="GitHub">
-                <Github className="h-5 w-5" />
-              </Link>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="#" target="_blank" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5" />
-              </Link>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="#" target="_blank" aria-label="Twitter">
-                <Twitter className="h-5 w-5" />
-              </Link>
-            </Button>
+            {socialLinks.map((link) => (
+              <Button variant="ghost" size="icon" asChild key={link.href}>
+                <Link href={link.href} target="_blank" aria-label={link.ariaLabel}>
+                  {link.icon}
+                </Link>
+              </Button>
+            ))}
           </div>
         </div>
       </div>

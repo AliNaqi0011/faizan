@@ -60,12 +60,11 @@ export function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
+            <SheetContent side="right" onClick={() => setIsOpen(false)}>
               <div className="flex flex-col gap-6 p-6">
                 <Link
                   href="/"
                   className="text-2xl font-bold font-headline text-primary"
-                  onClick={() => setIsOpen(false)}
                 >
                   Ali Naqi
                 </Link>
@@ -75,14 +74,13 @@ export function Header() {
                       key={link.href}
                       href={link.href}
                       className="text-lg font-medium text-foreground/80 transition-colors hover:text-primary"
-                      onClick={() => setIsOpen(false)}
                     >
                       {link.label}
                     </Link>
                   ))}
                 </nav>
                 <Button asChild>
-                  <Link href="#contact" onClick={() => setIsOpen(false)}>Hire Me</Link>
+                  <Link href="#contact">Hire Me</Link>
                 </Button>
               </div>
             </SheetContent>
