@@ -1,6 +1,7 @@
 
 "use client";
 
+import { use, useEffect } from 'react';
 import { notFound, useRouter, useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -64,7 +65,7 @@ export default function ProjectDetailPage() {
               <div className="flex flex-wrap gap-2 md:gap-3">
                 {project.tech.map(t => <Badge key={t} variant="secondary" className="px-3 py-1 text-sm">{t}</Badge>)}
               </div>
-              <div className="prose prose-base md:prose-lg prose-invert text-foreground/80 max-w-none">
+              <div className="prose prose-base md:prose-lg prose-invert text-foreground/80 max-w-none text-justify">
                 <p className="whitespace-pre-wrap">{project.longDescription}</p>
               </div>
               
