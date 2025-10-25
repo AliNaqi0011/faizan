@@ -30,11 +30,11 @@ export function ParticleBackground() {
     particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
 
     const particlesMaterial = new THREE.PointsMaterial({
-      color: 0xE67E22,
-      size: 0.02,
+      color: 0x3B82F6, // Electric Blue
+      size: 0.025,
       blending: THREE.AdditiveBlending,
       transparent: true,
-      opacity: 0.7
+      opacity: 0.6
     });
 
     const particles = new THREE.Points(particlesGeometry, particlesMaterial);
@@ -60,6 +60,7 @@ export function ParticleBackground() {
       const elapsedTime = clock.getElapsedTime();
 
       particles.rotation.y = elapsedTime * 0.05;
+      particles.rotation.x = elapsedTime * 0.02;
 
       camera.position.x += (mouseX * 0.0001 - camera.position.x) * 0.02;
       camera.position.y += (-mouseY * 0.0001 - camera.position.y) * 0.02;

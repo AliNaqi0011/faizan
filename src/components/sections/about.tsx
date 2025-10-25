@@ -39,7 +39,11 @@ export function AboutSection() {
         <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-center">
           <motion.div variants={itemVariants} className="flex justify-center">
             {developerPhoto && (
-              <div className="relative group">
+              <motion.div 
+                className="relative group"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
                 <div className="absolute -inset-1.5 bg-gradient-to-r from-primary to-accent rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                 <Image
                   src={developerPhoto.imageUrl}
@@ -49,7 +53,7 @@ export function AboutSection() {
                   height={400}
                   className="rounded-full relative object-cover aspect-square shadow-2xl"
                 />
-              </div>
+              </motion.div>
             )}
           </motion.div>
           <motion.div variants={itemVariants} className="space-y-6">
@@ -62,12 +66,18 @@ export function AboutSection() {
         <motion.div variants={itemVariants} className="mt-24">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {stats.map((stat, index) => (
-              <Card key={index} className="bg-card/50 border-border/50 text-center p-4 sm:p-6 transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
-                <CardContent className="flex flex-col items-center justify-center gap-2 sm:gap-4 p-0">
-                  {stat.icon}
-                  <p className="text-sm sm:text-md font-semibold text-muted-foreground mt-2 text-center">{stat.label}</p>
-                </CardContent>
-              </Card>
+              <motion.div
+                key={index}
+                whileHover={{ y: -8, scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <Card className="bg-card/50 border-border/50 text-center p-4 sm:p-6 h-full transform transition-shadow duration-300 hover:shadow-2xl hover:shadow-primary/20">
+                  <CardContent className="flex flex-col items-center justify-center gap-2 sm:gap-4 p-0">
+                    {stat.icon}
+                    <p className="text-sm sm:text-md font-semibold text-muted-foreground mt-2 text-center">{stat.label}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </motion.div>
