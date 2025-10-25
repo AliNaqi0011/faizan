@@ -41,23 +41,23 @@ export function HeroSection() {
           className="text-4xl md:text-6xl lg:text-7xl font-bold font-headline tracking-tight"
           variants={itemVariants}
         >
-          Engineering the Future of Power and Automation.
+          Your Global Partner in Auto Parts & Machinery.
         </motion.h1>
         <motion.p
           className="max-w-3xl text-lg md:text-xl text-foreground/80"
           variants={itemVariants}
         >
-          I’m Kashaf Fatima Bukhari, an Electrical Engineer dedicated to designing efficient, reliable, and sustainable technological solutions.
+          Faizan Enterprises: Delivering quality and building trust in international trade since 2022.
         </motion.p>
         <motion.div
           className="flex flex-col sm:flex-row gap-4 mt-4"
           variants={itemVariants}
         >
           <Button size="lg" asChild>
-            <Link href="#projects">View Projects</Link>
+            <Link href="#products">Our Products</Link>
           </Button>
           <Button size="lg" variant="secondary" asChild>
-            <Link href="#experience">My Experience</Link>
+            <Link href="#about">About Us</Link>
           </Button>
         </motion.div>
       </motion.div>
