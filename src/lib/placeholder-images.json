@@ -8,37 +8,37 @@
     },
     {
       "id": "project-1",
-      "description": "Screenshot of Project 1",
+      "description": "Screenshot of a web application",
       "imageUrl": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3ZWIlMjBhcHBsaWNhdGlvbnxlbnwwfHx8fDE3NjEzMTk3Njd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "web application"
     },
     {
       "id": "project-2",
-      "description": "Screenshot of Project 2",
+      "description": "Screenshot of an analytics dashboard",
       "imageUrl": "https://images.unsplash.com/photo-1748609278627-4b0e483b9b70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkYXNoYm9hcmQlMjBhbmFseXRpY3N8ZW58MHx8fHwxNzYxMjgwOTk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "dashboard analytics"
     },
     {
       "id": "project-3",
-      "description": "Screenshot of Project 3",
+      "description": "Screenshot of an e-commerce website",
       "imageUrl": "https://images.unsplash.com/photo-1742454582165-deab666a8763?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxlLWNvbW1lcmNlJTIwd2Vic2l0ZXxlbnwwfHx8fDE3NjEyNjA1MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "e-commerce website"
     },
     {
       "id": "project-4",
-      "description": "Screenshot of Project 4",
-      "imageUrl": "https://images.unsplash.com/photo-1627827963820-089a37e00291?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjbXMlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzYxMzc4NzYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Screenshot of a CMS dashboard",
+      "imageUrl": "https://images.unsplash.com/photo-1627827963820-089a37e00291?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjbXMlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzYxMzc4NzYwfDA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "cms dashboard"
     },
     {
       "id": "project-5",
-      "description": "Screenshot of Project 5",
+      "description": "Screenshot of a mobile app",
       "imageUrl": "https://images.unsplash.com/photo-1601972602237-8c79241e468b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzYxMjk2Nzg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mobile app"
     },
     {
       "id": "project-6",
-      "description": "Screenshot of Project 6",
+      "description": "Screenshot of a saas platform",
       "imageUrl": "https://images.unsplash.com/photo-1660198348421-d80e956c7db5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzYWFzJTIwcGxhdGZvcm18ZW58MHx8fHwxNzYxMjk1ODc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "saas platform"
     },
@@ -69,7 +69,7 @@
     {
       "id": "project-11",
       "description": "Screenshot of a resume builder application",
-      "imageUrl": "https://images.unsplash.com/photo-1659353588156-60841623ae2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxyZXN1bWUlMjBidWlsZGVyfGVufDB8fHx8MTc2MTM4MDM2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1659353588156-60841623ae2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxyZXN1bWUlMjBidWlsZGVyfGVufDB8fHx8MTc2MTM4MDM2OXww&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "resume builder"
     },
     {
