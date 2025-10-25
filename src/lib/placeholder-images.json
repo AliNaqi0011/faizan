@@ -2,51 +2,33 @@
   "placeholderImages": [
     {
       "id": "developer-photo",
-      "description": "Professional photo of Laraib Fatima Awan",
-      "imageUrl": "https://images.unsplash.com/photo-1573165850883-9b0e18c44bd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3NjEzMjc5MDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional woman"
+      "description": "Professional photo of Kashaf Fatima Bukhari",
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxlbmdpbmVlciUyMHdvbWFufGVufDB8fHx8MTc2MTQ0NzU2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "electrical engineer"
     },
     {
-      "id": "e-voting",
-      "description": "Digital interface for an E-Voting System",
-      "imageUrl": "https://images.unsplash.com/photo-1573376670774-4427757f7963?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx2b3RpbmclMjBzeXN0ZW18ZW58MHx8fHwxNzYxMzgyNzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "voting system"
+      "id": "plc-automation",
+      "description": "An industrial PLC automation control panel",
+      "imageUrl": "https://images.unsplash.com/photo-1633479024332-81745c85a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwbGMlMjBhdXRvbWF0aW9ufGVufDB8fHx8MTc2MTQ0NzU2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "PLC automation"
     },
     {
-      "id": "pos-system",
-      "description": "Dashboard for a Point of Sale (POS) system",
-      "imageUrl": "https://images.unsplash.com/photo-1647427017067-8f33ccbae493?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwb3MlMjBzeXN0ZW18ZW58MHx8fHwxNzYxMzYxNTM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "pos system"
+      "id": "solar-power",
+      "description": "A solar panel array with a clear sky background",
+      "imageUrl": "https://images.unsplash.com/photo-1545208942-73c942394a55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzb2xhciUyMHBvd2VyfGVufDB8fHx8MTc2MTQ0NzU2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "solar power"
     },
     {
-      "id": "uml-editor",
-      "description": "A software editor for creating UML diagrams",
-      "imageUrl": "https://images.unsplash.com/photo-1706535849689-59e888460d10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkaWFncmFtJTIwZWRpdG9yfGVufDB8fHx8MTc2MTM4MjcxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "diagram editor"
+      "id": "grid-management",
+      "description": "Digital interface for smart grid management",
+      "imageUrl": "https://images.unsplash.com/photo-1664392842516-433e38275e53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzbWFydCUyMGdyaWR8ZW58MHx8fHwxNzYxNDQ3NTY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smart grid"
     },
     {
-      "id": "wellness-guide",
-      "description": "User interface for a wellness guide application",
-      "imageUrl": "https://images.unsplash.com/photo-1642557581363-0ab2f77764f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d2VsbG5lc3MlMjBhcHB8ZW58MHx8fHwxNzYxMzgyNzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "wellness app"
-    },
-    {
-      "id": "turkish-draughts",
-      "description": "A digital game of Turkish Draughts",
-      "imageUrl": "https://images.unsplash.com/photo-1632501641765-e568d28b0015?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxib2FyZCUyMGdhbWV8ZW58MHx8fHwxNzYxMzc2OTQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "board game"
-    },
-    {
-      "id": "konvox",
-      "description": "Interface of the KonvoX social media platform",
-      "imageUrl": "https://images.unsplash.com/photo-1579869847557-1f67382cc158?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzb2NpYWwlMjBtZWRpYXxlbnwwfHx8fDE3NjEzNTM5NzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "social media"
-    },
-    {
-      "id": "plant-disease",
-      "description": "Web tool for detecting plant diseases from images",
-      "imageUrl": "https://images.unsplash.com/photo-1571597437020-41ce817795b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwbGFudCUyMGRldGVjdGlvbnxlbnwwfHx8fDE3NjEzODI3MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "plant detection"
+      "id": "ev-charging",
+      "description": "An electric vehicle charging at a modern station",
+      "imageUrl": "https://images.unsplash.com/photo-1617886322207-6f504e7472c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxldCUyMGNoYXJnaW5nfGVufDB8fHx8MTc2MTQ0NzU2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "EV charging"
     }
   ]
 }

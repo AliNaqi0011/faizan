@@ -4,15 +4,15 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent } from "@/components/ui/card";
-import { GitBranch, Clapperboard, BrainCircuit, Users } from "lucide-react";
+import { Zap, Cpu, Lightbulb, Factory } from "lucide-react";
 
 const developerPhoto = PlaceHolderImages.find(p => p.id === 'developer-photo');
 
 const stats = [
-  { icon: <GitBranch className="h-8 w-8 text-primary" />, label: "Version Control" },
-  { icon: <Clapperboard className="h-8 w-8 text-primary" />, label: "Agile Methodologies" },
-  { icon: <BrainCircuit className="h-8 w-8 text-primary" />, label: "Critical Thinking" },
-  { icon: <Users className="h-8 w-8 text-primary" />, label: "Collaboration" },
+  { icon: <Zap className="h-8 w-8 text-primary" />, label: "Power Systems" },
+  { icon: <Cpu className="h-8 w-8 text-primary" />, label: "Automation" },
+  { icon: <Lightbulb className="h-8 w-8 text-primary" />, label: "Renewable Energy" },
+  { icon: <Factory className="h-8 w-8 text-primary" />, label: "Industrial Controls" },
 ];
 
 export function AboutSection() {
@@ -55,17 +55,17 @@ export function AboutSection() {
           <motion.div variants={itemVariants} className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">About Me</h2>
             <p className="text-lg text-foreground/80">
-              Ambitious and detail-oriented final-year Software Engineering student at FAST-NUCES with hands-on experience in full-stack development, AI/ML applications, and scalable web solutions. Skilled in Agile practices, version control, and delivering high-quality products. Known for critical thinking, collaboration, and the ability to adapt quickly to dynamic project needs.
+              I am a results-driven Electrical Engineer with a passion for designing and implementing innovative solutions in power systems, automation, and control. With a strong foundation in theoretical principles and hands-on experience in industrial settings, I thrive on solving complex challenges. My journey has taken me from developing robust engineering solutions in Lahore to optimizing large-scale logistics systems in the USA, always with a focus on efficiency, safety, and sustainability.
             </p>
           </motion.div>
         </div>
         <motion.div variants={itemVariants} className="mt-24">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {stats.map((stat, index) => (
-              <Card key={index} className="bg-card/50 border-border/50 text-center p-6 transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
-                <CardContent className="flex flex-col items-center justify-center gap-4 p-0">
+              <Card key={index} className="bg-card/50 border-border/50 text-center p-4 sm:p-6 transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                <CardContent className="flex flex-col items-center justify-center gap-2 sm:gap-4 p-0">
                   {stat.icon}
-                  <p className="text-md font-semibold text-muted-foreground mt-2">{stat.label}</p>
+                  <p className="text-sm sm:text-md font-semibold text-muted-foreground mt-2 text-center">{stat.label}</p>
                 </CardContent>
               </Card>
             ))}

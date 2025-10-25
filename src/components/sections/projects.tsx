@@ -29,7 +29,7 @@ export function ProjectsSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Featured Projects</h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            A selection of projects that showcase my dedication to quality and innovation.
+            A selection of projects demonstrating my expertise in electrical engineering and automation.
           </p>
         </div>
         
@@ -48,24 +48,24 @@ export function ProjectsSection() {
                   <Link href={`/projects/${project.id}`} className="block h-full">
                     <Card className="overflow-hidden h-full group bg-card border-border/50 hover:border-primary transition-all duration-300">
                       <CardContent className="p-0 flex flex-col h-full">
-                        <div className="relative overflow-hidden">
-                          {projectImage && (
-                            <Image
-                              src={projectImage.imageUrl}
-                              alt={project.title}
-                              data-ai-hint={projectImage.imageHint}
-                              width={600}
-                              height={400}
-                              className="object-cover w-full h-48 md:h-60 transition-transform duration-500 group-hover:scale-110"
-                            />
-                          )}
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                        </div>
+                        {projectImage && (
+                          <div className="relative overflow-hidden">
+                              <Image
+                                src={projectImage.imageUrl}
+                                alt={project.title}
+                                data-ai-hint={projectImage.imageHint}
+                                width={600}
+                                height={400}
+                                className="object-cover w-full h-48 md:h-56 transition-transform duration-500 group-hover:scale-110"
+                              />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                          </div>
+                        )}
                         <div className="p-4 md:p-6 flex flex-col flex-grow">
                           <h3 className="text-lg md:text-xl font-bold font-headline mb-2">{project.title}</h3>
                           <p className="text-muted-foreground text-sm flex-grow">{project.description}</p>
                           <div className="flex flex-wrap gap-2 my-4">
-                            {project.tech.slice(0, 4).map(t => <Badge key={t} variant="secondary" className="text-xs">{t}</Badge>)}
+                            {project.tech.slice(0, 4).map(t => <Badge key={t} variant="secondary" className="px-2.5 py-1 text-xs">{t}</Badge>)}
                           </div>
                           <div className="text-primary flex items-center mt-auto text-sm font-semibold">
                               View Project <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />

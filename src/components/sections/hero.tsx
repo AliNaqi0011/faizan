@@ -41,13 +41,13 @@ export function HeroSection() {
           className="text-4xl md:text-6xl lg:text-7xl font-bold font-headline tracking-tight"
           variants={itemVariants}
         >
-          Building Scalable and Intelligent Software Solutions.
+          Engineering the Future of Power and Automation.
         </motion.h1>
         <motion.p
           className="max-w-3xl text-lg md:text-xl text-foreground/80"
           variants={itemVariants}
         >
-          I’m Laraib Fatima, a Software Engineering student passionate about creating high-quality, impactful applications.
+          I’m Kashaf Fatima Bukhari, an Electrical Engineer dedicated to designing efficient, reliable, and sustainable technological solutions.
         </motion.p>
         <motion.div
           className="flex flex-col sm:flex-row gap-4 mt-4"
@@ -57,7 +57,7 @@ export function HeroSection() {
             <Link href="#projects">View Projects</Link>
           </Button>
           <Button size="lg" variant="secondary" asChild>
-            <Link href="#contact">Hire Me</Link>
+            <Link href="#experience">My Experience</Link>
           </Button>
         </motion.div>
       </motion.div>

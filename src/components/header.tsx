@@ -8,9 +8,9 @@ import { Menu } from "lucide-react";
 
 const navLinks = [
   { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
 ];
 
 export function Header() {
@@ -39,7 +39,7 @@ export function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="text-2xl font-bold font-headline text-primary">
-          Laraib Fatima
+          Kashaf Bukhari
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
@@ -51,9 +51,6 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Button asChild>
-            <Link href="#contact">Hire Me</Link>
-          </Button>
         </nav>
         <div className="md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -69,7 +66,7 @@ export function Header() {
                   href="/"
                   className="text-2xl font-bold font-headline text-primary"
                 >
-                  Laraib Fatima
+                  Kashaf Bukhari
                 </Link>
                 <nav className="flex flex-col gap-4">
                   {navLinks.map((link) => (
@@ -82,9 +79,6 @@ export function Header() {
                     </Link>
                   ))}
                 </nav>
-                <Button asChild>
-                  <Link href="#contact">Hire Me</Link>
-                </Button>
               </div>
             </SheetContent>
           </Sheet>

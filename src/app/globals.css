@@ -4,53 +4,70 @@
 
 @layer base {
   :root {
-    --background: 225 47% 12%; /* #12182B */
-    --foreground: 210 40% 98%;
-    --card: 225 47% 15%;
-    --card-foreground: 210 40% 98%;
-    --popover: 225 47% 12%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 28 80% 52%; /* #E67E22 */
-    --primary-foreground: 210 40% 98%;
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 36 90% 51%; /* #F39C12 */
-    --accent-foreground: 226 43% 98%;
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 28 80% 52%;
-    --chart-1: 28 80% 52%;
-    --chart-2: 36 90% 51%;
-    --chart-3: 204 100% 50%;
-    --chart-4: 144 75% 42%;
+    --background: 220 20% 95%; /* Light Gray */
+    --foreground: 225 25% 15%; /* Dark Blue-Gray */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 225 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 25% 15%;
+
+    --primary: 217 91% 60%; /* Electric Blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 90%; /* Lighter Gray */
+    --secondary-foreground: 225 25% 15%;
+
+    --muted: 220 14% 90%;
+    --muted-foreground: 225 15% 45%;
+
+    --accent: 217 80% 65%; /* Softer Blue */
+    --accent-foreground: 225 25% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 85%;
+    --input: 220 15% 85%;
+    --ring: 217 91% 60%;
+
+    --chart-1: 217 91% 60%;
+    --chart-2: 190 80% 55%;
+    --chart-3: 28 80% 52%;
+    --chart-4: 36 90% 51%;
     --chart-5: 280 88% 63%;
     --radius: 0.5rem;
   }
  
   .dark {
-    --background: 225 47% 12%;
+    --background: 225 25% 10%; /* Dark Blue */
     --foreground: 210 40% 98%;
-    --card: 225 47% 15%;
+
+    --card: 225 25% 13%;
     --card-foreground: 210 40% 98%;
-    --popover: 225 47% 12%;
+
+    --popover: 225 25% 10%;
     --popover-foreground: 210 40% 98%;
-    --primary: 28 80% 52%;
+
+    --primary: 217 91% 60%; /* Electric Blue */
     --primary-foreground: 210 40% 98%;
-    --secondary: 217 33% 17%;
+
+    --secondary: 225 25% 18%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 217 33% 17%;
+
+    --muted: 225 25% 18%;
     --muted-foreground: 215 20% 65%;
-    --accent: 36 90% 51%;
-    --accent-foreground: 226 43% 98%;
+
+    --accent: 217 80% 65%; /* Softer Blue */
+    --accent-foreground: 210 40% 98%;
+
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 28 80% 52%;
+    
+    --border: 225 25% 18%;
+    --input: 225 25% 18%;
+    --ring: 217 91% 60%;
   }
 }
 
