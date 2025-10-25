@@ -1,5 +1,7 @@
 
-import { notFound } from 'next/navigation';
+"use client";
+
+import { notFound, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { allProjects } from '@/lib/projects-data';
@@ -9,14 +11,10 @@ import { Button } from '@/components/ui/button';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
-
-export async function generateStaticParams() {
-  return allProjects.map((project) => ({
-    id: project.id.toString(),
-  }));
-}
+import { motion } from 'framer-motion';
 
 export default function ProjectDetailPage({ params }: { params: { id: string } }) {
+  const router = useRouter();
   const project = allProjects.find((p) => p.id.toString() === params.id);
 
   if (!project) {
@@ -25,48 +23,81 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
 
   const projectImage = PlaceHolderImages.find(p => p.id === project.imageId);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background">
       <Header />
       <main className="flex-1 py-16 sm:py-24">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="mb-8">
-            <Button variant="ghost" asChild>
-              <Link href="/#projects">
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Projects
-              </Link>
+        <motion.div
+          className="container mx-auto px-4 md:px-6"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div variants={itemVariants} className="mb-12">
+            <Button variant="ghost" onClick={() => router.push('/#projects')}>
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to All Projects
             </Button>
-          </div>
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl font-bold font-headline text-primary">{project.title}</h1>
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map(t => <Badge key={t} variant="secondary">{t}</Badge>)}
+          </motion.div>
+          
+          <div className="grid md:grid-cols-5 gap-16">
+            <motion.div variants={itemVariants} className="md:col-span-3 space-y-8">
+              <h1 className="text-4xl lg:text-5xl font-bold font-headline text-primary tracking-tight">{project.title}</h1>
+              <div className="flex flex-wrap gap-3">
+                {project.tech.map(t => <Badge key={t} variant="secondary" className="px-3 py-1 text-sm">{t}</Badge>)}
               </div>
-              <p className="text-lg text-foreground/80">{project.longDescription}</p>
+              <div className="prose prose-lg prose-invert text-foreground/80 max-w-none">
+                <p>{project.longDescription}</p>
+              </div>
+              
               {project.liveLink !== '#' && (
-                <Button asChild>
-                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                    Visit Live Site <ExternalLink className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
+                 <motion.div variants={itemVariants}>
+                    <Button asChild size="lg">
+                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                        Visit Live Site <ExternalLink className="ml-2 h-5 w-5" />
+                    </a>
+                    </Button>
+                 </motion.div>
               )}
-            </div>
-            <div>
+            </motion.div>
+
+            <motion.div 
+              variants={itemVariants} 
+              className="md:col-span-2 relative group"
+            >
               {projectImage && (
-                <Image
-                  src={projectImage.imageUrl}
-                  alt={project.title}
-                  data-ai-hint={projectImage.imageHint}
-                  width={800}
-                  height={600}
-                  className="rounded-lg object-cover shadow-2xl"
-                />
+                <div className="sticky top-28">
+                    <div className="absolute -inset-2.5 bg-gradient-to-r from-primary to-accent rounded-xl blur opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                    <Image
+                    src={projectImage.imageUrl}
+                    alt={project.title}
+                    data-ai-hint={projectImage.imageHint}
+                    width={800}
+                    height={600}
+                    className="rounded-lg object-cover shadow-2xl relative"
+                    />
+                </div>
               )}
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </main>
       <Footer />
     </div>
