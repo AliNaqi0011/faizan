@@ -41,13 +41,13 @@ export function HeroSection() {
           className="text-4xl md:text-6xl lg:text-7xl font-bold font-headline tracking-tight"
           variants={itemVariants}
         >
-          Crafting Digital Experiences for Over Two Decades.
+          Building Scalable and Intelligent Software Solutions.
         </motion.h1>
         <motion.p
           className="max-w-3xl text-lg md:text-xl text-foreground/80"
           variants={itemVariants}
         >
-          I’m Ali Naqi, a Senior Web Application Developer passionate about building scalable, user-focused solutions.
+          I’m Laraib Fatima, a Software Engineering student passionate about creating high-quality, impactful applications.
         </motion.p>
         <motion.div
           className="flex flex-col sm:flex-row gap-4 mt-4"

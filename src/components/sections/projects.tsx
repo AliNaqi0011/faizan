@@ -1,25 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { allProjects } from "@/lib/projects-data";
 import { ArrowRight } from "lucide-react";
-
-const filters = ["All", "Laravel", "WordPress", "JS", "PHP"];
+import { Badge } from "../ui/badge";
 
 export function ProjectsSection() {
-  const [activeFilter, setActiveFilter] = useState("All");
-
-  const filteredProjects = activeFilter === "All"
-    ? allProjects
-    : allProjects.filter(p => p.category === activeFilter);
-
   const sectionVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.5 } },
@@ -41,20 +32,9 @@ export function ProjectsSection() {
             A selection of projects that showcase my dedication to quality and innovation.
           </p>
         </div>
-        <div className="flex justify-center gap-2 mb-12">
-          {filters.map(filter => (
-            <Button
-              key={filter}
-              variant={activeFilter === filter ? "default" : "secondary"}
-              onClick={() => setActiveFilter(filter)}
-            >
-              {filter}
-            </Button>
-          ))}
-        </div>
+        
         <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <AnimatePresence>
-            {filteredProjects.map(project => {
+            {allProjects.map(project => {
               const projectImage = PlaceHolderImages.find(p => p.id === project.imageId);
               return (
                 <motion.div
@@ -67,7 +47,7 @@ export function ProjectsSection() {
                 >
                   <Link href={`/projects/${project.id}`} className="block h-full">
                     <Card className="overflow-hidden h-full group bg-card border-border/50 hover:border-primary transition-all duration-300">
-                      <CardContent className="p-0">
+                      <CardContent className="p-0 flex flex-col h-full">
                         <div className="relative overflow-hidden">
                           {projectImage && (
                             <Image
@@ -81,12 +61,13 @@ export function ProjectsSection() {
                           )}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                         </div>
-                        <div className="p-6">
+                        <div className="p-6 flex flex-col flex-grow">
                           <h3 className="text-xl font-bold font-headline mb-2">{project.title}</h3>
-                          <div className="flex flex-wrap gap-2 mb-4">
+                          <p className="text-muted-foreground text-sm flex-grow">{project.description}</p>
+                          <div className="flex flex-wrap gap-2 my-4">
                             {project.tech.map(t => <Badge key={t} variant="secondary">{t}</Badge>)}
                           </div>
-                          <div className="text-primary flex items-center">
+                          <div className="text-primary flex items-center mt-auto">
                               View Project <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                           </div>
                         </div>
@@ -96,7 +77,6 @@ export function ProjectsSection() {
                 </motion.div>
               );
             })}
-          </AnimatePresence>
         </motion.div>
       </div>
     </motion.section>

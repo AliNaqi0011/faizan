@@ -4,15 +4,15 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase, Users, Code, Calendar } from "lucide-react";
+import { GitBranch, Clapperboard, BrainCircuit, Users } from "lucide-react";
 
 const developerPhoto = PlaceHolderImages.find(p => p.id === 'developer-photo');
 
 const stats = [
-  { icon: <Briefcase className="h-8 w-8 text-primary" />, value: "150+", label: "Projects Delivered" },
-  { icon: <Users className="h-8 w-8 text-primary" />, value: "80+", label: "Clients Worldwide" },
-  { icon: <Calendar className="h-8 w-8 text-primary" />, value: "20+", label: "Years of Experience" },
-  { icon: <Code className="h-8 w-8 text-primary" />, value: "15+", label: "Technologies Mastered" },
+  { icon: <GitBranch className="h-8 w-8 text-primary" />, label: "Version Control" },
+  { icon: <Clapperboard className="h-8 w-8 text-primary" />, label: "Agile Methodologies" },
+  { icon: <BrainCircuit className="h-8 w-8 text-primary" />, label: "Critical Thinking" },
+  { icon: <Users className="h-8 w-8 text-primary" />, label: "Collaboration" },
 ];
 
 export function AboutSection() {
@@ -55,10 +55,7 @@ export function AboutSection() {
           <motion.div variants={itemVariants} className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">About Me</h2>
             <p className="text-lg text-foreground/80">
-              For over two decades, I have been at the forefront of web technology, evolving from classic PHP architectures to the dynamic world of modern JavaScript frameworks. My journey is one of continuous adaptation and a relentless pursuit of excellence. I don't just write code; I architect robust, scalable, and user-centric web applications that stand the test of time.
-            </p>
-            <p className="text-lg text-foreground/80">
-              My leadership in project architecture has guided teams to deliver high-impact solutions for a diverse range of clients, from startups to enterprise-level corporations. I believe in blending deep-seated wisdom with innovative technologies to create digital experiences that are not only functional but truly exceptional.
+              Ambitious and detail-oriented final-year Software Engineering student at FAST-NUCES with hands-on experience in full-stack development, AI/ML applications, and scalable web solutions. Skilled in Agile practices, version control, and delivering high-quality products. Known for critical thinking, collaboration, and the ability to adapt quickly to dynamic project needs.
             </p>
           </motion.div>
         </div>
@@ -66,10 +63,9 @@ export function AboutSection() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {stats.map((stat, index) => (
               <Card key={index} className="bg-card/50 border-border/50 text-center p-6 transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
-                <CardContent className="flex flex-col items-center gap-4 p-0">
+                <CardContent className="flex flex-col items-center justify-center gap-4 p-0">
                   {stat.icon}
-                  <p className="text-4xl font-bold font-headline text-primary">{stat.value}</p>
-                  <p className="text-sm text-muted-foreground">{stat.label}</p>
+                  <p className="text-md font-semibold text-muted-foreground mt-2">{stat.label}</p>
                 </CardContent>
               </Card>
             ))}

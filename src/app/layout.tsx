@@ -2,8 +2,8 @@ import type {Metadata} from 'next';
 import {Toaster} from "@/components/ui/toaster";
 import './globals.css';
 
-const appName = "Genesis Portfolio";
-const appDescription = "The portfolio of Ali Naqi, a seasoned senior web architect.";
+const appName = "Laraib Fatima's Portfolio";
+const appDescription = "Ambitious and detail-oriented final-year Software Engineering student with hands-on experience in full-stack development, AI/ML applications, and scalable web solutions.";
 
 export const metadata: Metadata = {
   title: appName,
@@ -19,11 +19,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: appName,
     description: appDescription,
-    url: 'https://genesis-portfolio.com', // Replace with actual URL
+    url: 'https://laraib-awan-portfolio.com', // Replace with actual URL
     siteName: appName,
     images: [
       {
-        url: 'https://genesis-portfolio.com/og-image.png', // Replace with actual image
+        url: 'https://laraib-awan-portfolio.com/og-image.png', // Replace with actual image
         width: 1200,
         height: 630,
       },
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: appName,
     description: appDescription,
-    images: ['https://genesis-portfolio.com/og-image.png'], // Replace with actual image
+    images: ['https://laraib-awan-portfolio.com/og-image.png'], // Replace with actual image
   },
 };
 
@@ -48,7 +48,7 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: appName,
-    url: 'https://genesis-portfolio.com', // Replace with actual URL
+    url: 'https://laraib-awan-portfolio.com', // Replace with actual URL
   };
 
   return (
