@@ -1,7 +1,7 @@
 
 "use client";
 
-import { notFound, useRouter } from 'next/navigation';
+import { notFound, useRouter, useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { allProjects } from '@/lib/projects-data';
@@ -13,8 +13,9 @@ import { Footer } from '@/components/footer';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-export default function ProjectDetailPage({ params }: { params: { id: string } }) {
+export default function ProjectDetailPage() {
   const router = useRouter();
+  const params = useParams();
   const project = allProjects.find((p) => p.id.toString() === params.id);
 
   if (!project) {
