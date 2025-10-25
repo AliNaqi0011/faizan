@@ -1,10 +1,9 @@
 
 "use client";
 
-import { use, useEffect } from 'react';
+import { useEffect } from 'react';
 import { notFound, useRouter, useParams } from 'next/navigation';
 import Image from 'next/image';
-import Link from 'next/link';
 import { allProjects } from '@/lib/projects-data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
@@ -22,7 +21,7 @@ export default function ProjectDetailPage() {
   if (!project) {
     notFound();
   }
-
+  
   const projectImage = PlaceHolderImages.find(p => p.id === project.imageId);
 
   const containerVariants = {
@@ -52,20 +51,20 @@ export default function ProjectDetailPage() {
           initial="hidden"
           animate="visible"
         >
-          <motion.div variants={itemVariants} className="mb-8 md:mb-12">
+          <motion.div variants={itemVariants} className="mb-8">
             <Button variant="ghost" onClick={() => router.push('/#projects')}>
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to All Projects
             </Button>
           </motion.div>
           
-          <div className="grid md:grid-cols-5 gap-8 md:gap-16">
-            <motion.div variants={itemVariants} className="md:col-span-3 space-y-6 md:space-y-8">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-headline text-primary tracking-tight">{project.title}</h1>
-              <div className="flex flex-wrap gap-2 md:gap-3">
-                {project.tech.map(t => <Badge key={t} variant="secondary" className="px-3 py-1 text-sm">{t}</Badge>)}
+          <div className="grid lg:grid-cols-5 gap-8 md:gap-12 lg:gap-16">
+            <motion.div variants={itemVariants} className="lg:col-span-3 space-y-6 md:space-y-8">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-headline text-primary tracking-tight">{project.title}</h1>
+              <div className="flex flex-wrap gap-2">
+                {project.tech.map(t => <Badge key={t} variant="secondary" className="px-3 py-1 text-xs sm:text-sm">{t}</Badge>)}
               </div>
-              <div className="prose prose-base md:prose-lg prose-invert text-foreground/80 max-w-none text-justify">
+              <div className="prose prose-sm sm:prose-base md:prose-lg prose-invert text-foreground/80 max-w-none text-justify">
                 <p className="whitespace-pre-wrap">{project.longDescription}</p>
               </div>
               
@@ -82,11 +81,11 @@ export default function ProjectDetailPage() {
 
             <motion.div 
               variants={itemVariants} 
-              className="md:col-span-2 relative group order-first md:order-last"
+              className="lg:col-span-2 relative group order-first lg:order-last"
             >
               {projectImage && (
-                <div className="md:sticky md:top-28">
-                    <div className="absolute -inset-1.5 md:-inset-2.5 bg-gradient-to-r from-primary to-accent rounded-xl blur opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                <div className="lg:sticky lg:top-28">
+                    <div className="absolute -inset-1.5 bg-gradient-to-r from-primary to-accent rounded-xl blur opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
                     <Image
                     src={projectImage.imageUrl}
                     alt={project.title}

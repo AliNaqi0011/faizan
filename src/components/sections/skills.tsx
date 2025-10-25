@@ -3,18 +3,25 @@
 import { motion } from "framer-motion";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Code, Server, Wrench, BrainCircuit } from "lucide-react";
+import {
+  LaravelIcon,
+  PhpIcon,
+  WordpressIcon,
+  JQueryIcon,
+  FirebaseIcon,
+} from "@/components/icons";
 
 const skills = {
   "Languages & Frameworks": {
-    icon: <Code className="h-8 w-8" />,
-    items: ["C++", "C", "Java", "Python", "JavaScript", "HTML", "CSS", "React", "NodeJS", "MERN Stack", "SQL", "JUnit", "UML"],
+    icon: <Code className="h-6 w-6 md:h-8 md:w-8" />,
+    items: ["C++", "C", "Java", "Python", "JavaScript", "HTML", "CSS", "React", "NodeJS", "MERN Stack", "SQL", "JUnit", "UML", "Laravel", "PHP", "Vue.js", "Inertia.js"],
   },
   "Tools & Platforms": {
-    icon: <Wrench className="h-8 w-8" />,
-    items: ["IntelliJ IDEA", "VS Code", "NetBeans", "PyCharm", "StarUML", "Figma", "Canva", "CodeBlocks", "Git", "Linux"],
+    icon: <Wrench className="h-6 w-6 md:h-8 md:w-8" />,
+    items: ["IntelliJ IDEA", "VS Code", "NetBeans", "PyCharm", "StarUML", "Figma", "Canva", "CodeBlocks", "Git", "Linux", "MySQL", "WordPress", "jQuery", "Firebase"],
   },
   "Core Areas": {
-    icon: <BrainCircuit className="h-8 w-8" />,
+    icon: <BrainCircuit className="h-6 w-6 md:h-8 md:w-8" />,
     items: ["OOP", "Data Structures", "Software Quality Assurance", "Agile Methodologies", "ER Diagrams", "Version Control"],
   },
 };
@@ -56,12 +63,12 @@ export function SkillsSection() {
                         <div className="bg-primary/10 p-3 rounded-full text-primary">
                             {icon}
                         </div>
-                        <CardTitle className="font-headline text-2xl">{category}</CardTitle>
+                        <CardTitle className="font-headline text-xl md:text-2xl">{category}</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <ul className="flex flex-wrap gap-2">
                             {items.map((item) => (
-                                <li key={item} className="bg-secondary text-secondary-foreground text-sm font-medium px-3 py-1 rounded-full">
+                                <li key={item} className="bg-secondary text-secondary-foreground text-xs sm:text-sm font-medium px-2.5 py-1 rounded-full">
                                     {item}
                                 </li>
                             ))}

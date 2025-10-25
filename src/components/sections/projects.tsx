@@ -56,18 +56,18 @@ export function ProjectsSection() {
                               data-ai-hint={projectImage.imageHint}
                               width={600}
                               height={400}
-                              className="object-cover w-full h-60 transition-transform duration-500 group-hover:scale-110"
+                              className="object-cover w-full h-48 md:h-60 transition-transform duration-500 group-hover:scale-110"
                             />
                           )}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                         </div>
-                        <div className="p-6 flex flex-col flex-grow">
-                          <h3 className="text-xl font-bold font-headline mb-2">{project.title}</h3>
+                        <div className="p-4 md:p-6 flex flex-col flex-grow">
+                          <h3 className="text-lg md:text-xl font-bold font-headline mb-2">{project.title}</h3>
                           <p className="text-muted-foreground text-sm flex-grow">{project.description}</p>
                           <div className="flex flex-wrap gap-2 my-4">
-                            {project.tech.map(t => <Badge key={t} variant="secondary">{t}</Badge>)}
+                            {project.tech.slice(0, 4).map(t => <Badge key={t} variant="secondary" className="text-xs">{t}</Badge>)}
                           </div>
-                          <div className="text-primary flex items-center mt-auto">
+                          <div className="text-primary flex items-center mt-auto text-sm font-semibold">
                               View Project <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                           </div>
                         </div>
