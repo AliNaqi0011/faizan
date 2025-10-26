@@ -31,7 +31,7 @@ export function ProductsSection() {
   return (
     <motion.section
       id="products"
-      className="py-24 sm:py-32 bg-secondary"
+      className="py-24 sm:py-32 bg-gray-50"
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
@@ -39,8 +39,10 @@ export function ProductsSection() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">Featured Products</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+          <h2 className="text-5xl font-black text-gray-900 mb-6">
+            Our <span className="text-blue-600">Products</span>
+          </h2>
+          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-600">
             Explore our diverse range of high-quality imported products.
           </p>
         </div>
@@ -56,12 +58,11 @@ export function ProductsSection() {
                   size="lg" 
                   className={`h-20 text-xl w-72 font-bold relative overflow-hidden transition-all duration-500 ${
                     activeCategory === 'autoparts' 
-                      ? 'bg-gradient-to-r from-gray-800 via-black to-gray-900 text-white shadow-2xl shadow-gray-800/50 border border-gray-700' 
-                      : 'bg-gradient-to-r from-gray-700 to-gray-800 text-gray-300 hover:from-gray-600 hover:to-gray-700 border border-gray-600'
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-xl' 
+                      : 'bg-white hover:bg-gray-50 text-gray-700 border-2 border-gray-200 hover:border-blue-300'
                   }`}
                   onClick={() => setActiveCategory('autoparts')}
                 >
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-1000" />
                     <Car className="mr-4 h-8 w-8" />
                     Premium Auto Parts
                     {activeCategory === 'autoparts' && <Sparkles className="ml-3 h-6 w-6 animate-pulse" />}
@@ -76,8 +77,8 @@ export function ProductsSection() {
                   size="lg" 
                   className={`h-20 text-xl w-72 font-bold relative overflow-hidden transition-all duration-500 ${
                     activeCategory === 'agriculture' 
-                      ? 'bg-gradient-to-r from-gray-800 via-black to-gray-900 text-white shadow-2xl shadow-gray-800/50 border border-gray-700' 
-                      : 'bg-gradient-to-r from-gray-700 to-gray-800 text-gray-300 hover:from-gray-600 hover:to-gray-700 border border-gray-600'
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-xl' 
+                      : 'bg-white hover:bg-gray-50 text-gray-700 border-2 border-gray-200 hover:border-blue-300'
                   }`}
                   onClick={() => setActiveCategory('agriculture')}
                 >
@@ -108,11 +109,11 @@ export function ProductsSection() {
                 whileHover={{ y: -12, rotateY: 5 }}
                 className="group perspective-1000"
               >
-                <Card className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800 border border-gray-700 shadow-xl hover:shadow-2xl hover:shadow-gray-900/50 transition-all duration-500 transform-gpu">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-700/10 via-gray-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <Card className="relative overflow-hidden bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-500 transform-gpu">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-blue-100/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
                   <div className="relative h-64 w-full overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-10" />
                     <Image
                       src={part.image}
                       alt={part.name}
@@ -121,43 +122,43 @@ export function ProductsSection() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     />
                     <div className="absolute top-4 right-4 z-20">
-                      <Badge className="bg-gradient-to-r from-gray-800 to-black text-white font-bold px-3 py-1 shadow-lg border border-gray-600">
+                      <Badge className="bg-blue-600 text-white font-bold px-3 py-1 shadow-lg">
                         {part.code}
                       </Badge>
                     </div>
                     <div className="absolute top-4 left-4 z-20">
-                      <div className="w-3 h-3 bg-gray-400 rounded-full animate-pulse shadow-lg" />
+                      <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg" />
                     </div>
                   </div>
                   
                   <CardContent className="p-6 relative">
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-600 via-gray-500 to-gray-700" />
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700" />
                     
                     <div className="mb-4">
-                      <h3 className="font-bold text-xl text-white mb-2 group-hover:text-gray-300 transition-colors duration-300">
+                      <h3 className="font-bold text-xl text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
                         {part.name}
                       </h3>
                       <div className="flex items-center gap-2 mb-3">
-                        <Badge variant="outline" className="text-xs font-medium border-gray-600 text-gray-300 bg-gray-800">
+                        <Badge variant="outline" className="text-xs font-medium border-blue-200 text-blue-700 bg-blue-50">
                           {part.category}
                         </Badge>
-                        <div className="flex-1 h-px bg-gradient-to-r from-gray-600 to-transparent" />
+                        <div className="flex-1 h-px bg-gradient-to-r from-blue-200 to-transparent" />
                       </div>
                     </div>
                     
-                    <p className="text-sm text-gray-400 leading-relaxed mb-4 line-clamp-2">
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4 line-clamp-2">
                       {part.description}
                     </p>
                     
-                    <div className="flex items-center pt-4 border-t border-gray-700">
+                    <div className="flex items-center pt-4 border-t border-gray-100">
                       <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-gray-500 rounded-full" />
-                        <span className="text-xs font-medium text-gray-400">Premium Quality</span>
+                        <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                        <span className="text-xs font-medium text-gray-500">Premium Quality</span>
                       </div>
                     </div>
                   </CardContent>
                   
-                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gray-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
                 </Card>
               </motion.div>
             ))}
@@ -184,11 +185,11 @@ export function ProductsSection() {
                 whileHover={{ y: -12, rotateY: 5 }}
                 className="group perspective-1000"
               >
-                <Card className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800 border border-gray-700 shadow-xl hover:shadow-2xl hover:shadow-gray-900/50 transition-all duration-500 transform-gpu">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-700/10 via-gray-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <Card className="relative overflow-hidden bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-500 transform-gpu">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-blue-100/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
                   <div className="relative h-64 w-full overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-10" />
                     <Image
                       src={product.image}
                       alt={product.name}
@@ -197,43 +198,43 @@ export function ProductsSection() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     />
                     <div className="absolute top-4 right-4 z-20">
-                      <Badge className="bg-gradient-to-r from-gray-800 to-black text-white font-bold px-3 py-1 shadow-lg border border-gray-600">
+                      <Badge className="bg-blue-600 text-white font-bold px-3 py-1 shadow-lg">
                         {product.code}
                       </Badge>
                     </div>
                     <div className="absolute top-4 left-4 z-20">
-                      <div className="w-3 h-3 bg-gray-400 rounded-full animate-pulse shadow-lg" />
+                      <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg" />
                     </div>
                   </div>
                   
                   <CardContent className="p-6 relative">
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-600 via-gray-500 to-gray-700" />
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700" />
                     
                     <div className="mb-4">
-                      <h3 className="font-bold text-xl text-white mb-2 group-hover:text-gray-300 transition-colors duration-300">
+                      <h3 className="font-bold text-xl text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
                         {product.name}
                       </h3>
                       <div className="flex items-center gap-2 mb-3">
-                        <Badge variant="outline" className="text-xs font-medium border-gray-600 text-gray-300 bg-gray-800">
+                        <Badge variant="outline" className="text-xs font-medium border-blue-200 text-blue-700 bg-blue-50">
                           {product.category}
                         </Badge>
-                        <div className="flex-1 h-px bg-gradient-to-r from-gray-600 to-transparent" />
+                        <div className="flex-1 h-px bg-gradient-to-r from-blue-200 to-transparent" />
                       </div>
                     </div>
                     
-                    <p className="text-sm text-gray-400 leading-relaxed mb-4 line-clamp-2">
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4 line-clamp-2">
                       {product.description}
                     </p>
                     
-                    <div className="flex items-center pt-4 border-t border-gray-700">
+                    <div className="flex items-center pt-4 border-t border-gray-100">
                       <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-gray-500 rounded-full" />
-                        <span className="text-xs font-medium text-gray-400">Premium Quality</span>
+                        <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                        <span className="text-xs font-medium text-gray-500">Premium Quality</span>
                       </div>
                     </div>
                   </CardContent>
                   
-                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gray-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
                 </Card>
               </motion.div>
             ))}
