@@ -8,19 +8,19 @@ export function ContactSection() {
     {
       icon: Phone,
       title: "Phone Number",
-      details: "+92 300 1234567",
+      details: "+923036684401",
       subtitle: "Mon-Fri 9AM-6PM"
     },
     {
       icon: Mail,
       title: "Email Address",
-      details: "info@faizanenterprises.com",
+      details: "ceo@faizan-enterprises.com",
       subtitle: "24/7 Support"
     },
     {
       icon: MapPin,
       title: "Office Location",
-      details: "Karachi, Pakistan",
+      details: "Amna Arcade,Main khayaban-e-Sehar Off.25th street,Near Bank Of Punjab, D.H.A karachi",
       subtitle: "Visit our headquarters"
     },
     {

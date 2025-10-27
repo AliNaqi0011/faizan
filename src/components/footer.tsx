@@ -81,15 +81,15 @@ export function Footer() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-400">+92 300 1234567</span>
+                <span className="text-gray-400">+923036684401</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-400">info@faizanenterprises.com</span>
+                <span className="text-gray-400">ceo@faizan-enterprises.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-400">Karachi, Pakistan</span>
+                <span className="text-gray-400">Amna Arcade,Main khayaban-e-Sehar Off.25th street,Near Bank Of Punjab, D.H.A karachi</span>
               </div>
               <div className="flex items-center gap-3">
                 <Globe className="w-5 h-5 text-blue-400" />
