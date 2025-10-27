@@ -57,7 +57,7 @@ export function Header() {
               className="flex items-center gap-3"
             >
               <img 
-                src="/logo faizan.jpeg" 
+                src="/logo faizan.jpg" 
                 alt="Faizan Enterprises Logo" 
                 className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover"
               />

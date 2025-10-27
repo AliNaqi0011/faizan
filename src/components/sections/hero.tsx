@@ -42,42 +42,45 @@ export function HeroSection() {
             </motion.div>
 
             {/* Enhanced Main Heading */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="space-y-4"
-            >
-              <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-gray-900 leading-none">
-                <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 bg-clip-text text-transparent">
-                  Premium
-                </span>
-                <br />
-                <span className="text-gray-800">Auto Parts</span>
-                <br />
-                <span className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-600 flex items-center justify-center lg:justify-start gap-2 md:gap-4">
-                  & Agriculture
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className="w-8 h-8 md:w-12 md:h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center"
-                  >
-                    <Globe className="w-4 h-4 md:w-6 md:h-6 text-white" />
-                  </motion.div>
-                </span>
-              </h1>
-            </motion.div>
+         <motion.div
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.4, duration: 0.8 }}
+  className="space-y-4 text-left sm:text-center lg:text-left"
+>
+  <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-gray-900 leading-none">
+    <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 bg-clip-text text-transparent">
+      Premium
+    </span>
+    <br />
+    <span className="text-gray-800">Auto Parts</span>
+    <br />
+    <span className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-600 flex items-center justify-start sm:justify-center lg:justify-start gap-2 md:gap-4">
+      & Agriculture
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        className="w-8 h-8 md:w-12 md:h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center"
+      >
+        <Globe className="w-4 h-4 md:w-6 md:h-6 text-white" />
+      </motion.div>
+    </span>
+  </h1>
+</motion.div>
 
             {/* Enhanced Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="text-lg md:text-2xl text-gray-600 leading-relaxed max-w-2xl font-medium"
-            >
-              Connecting global markets with exceptional quality automotive components, agricultural machinery, and horticultural materials. 
-              <span className="text-red-600 font-semibold"> Your trusted partner for international trade excellence.</span>
-            </motion.p>
+          <motion.p
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.6, duration: 0.8 }}
+  className="text-left sm:text-center lg:text-left text-base md:text-2xl text-black leading-relaxed max-w-2xl font-medium"
+>
+  Connecting global markets with exceptional quality automotive components, agricultural machinery, and horticultural materials. 
+  <span className="text-red-600 font-semibold">
+    {" "}Your trusted partner for international trade excellence.
+  </span>
+</motion.p>
+
 
             {/* Enhanced Stats */}
             <motion.div
